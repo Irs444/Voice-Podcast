@@ -7,7 +7,7 @@ const cors = require('cors');
  const UserRouter = require("./routers/userRouter");
  const ArtistRouter = require("./routers/artistRouter")
  const PublishRouter = require("./routers/publishRouter")
- const HorrorRouter = require("./routers/horrorRouter")
+ 
  const UtilRouter = require("./routers/util")
 
 
@@ -24,7 +24,7 @@ app.use(cors({
 app.use("/user", UserRouter);
 app.use("/artist", ArtistRouter);
 app.use("/publish", PublishRouter);
-app.use("/publish", HorrorRouter);
+
 app.use("/util", UtilRouter);
 
 app.use(express.static('./static/uploads'));

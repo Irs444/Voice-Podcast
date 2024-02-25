@@ -4,10 +4,11 @@ import { useParams } from 'react-router-dom'
 const Podcastcategory = () => {
 
   const {category} = useParams();
+
   const [categoryList, setCategoryList] = useState([]);
 
   const fetchcategoryData = async () => {
-    const res = await fetch("http://localhost:5000/publish/getbycategory/horror");
+    const res = await fetch("http://localhost:5000/publish/getbycategory/horror" );
     console.log(res.status);
     const data = await res.json();
     console.log(data);
@@ -27,7 +28,7 @@ const Podcastcategory = () => {
       return <h1>No Podcasts Found</h1>;
     }else {
     return  categoryList.map((cat) =>{
-      <div className="row">
+      return <div className="row">
         
         <div className="col-md-4 mb-4">
           <div
@@ -64,14 +65,18 @@ const Podcastcategory = () => {
         
       </div>
    }) }
-  }
+  };
 
   return (
     <div className=''>
     <header className='ls-head mt-3'>
-      {/* <div className='container py-5'>
-          <input type="text" placeholder='Search Items' className='form-control w-50 m-auto ps-search'  />
-        </div> */}
+      <div className='container'>
+        <div className='row'>
+          <div className='col-md-12'>
+            <h1 className='text-center'> Podcasts</h1>
+          </div>
+        </div>
+      </div>
     </header>
     <div className='container mb-5 '>
       <div className='row p-5'> {displayCategoryData()} </div>

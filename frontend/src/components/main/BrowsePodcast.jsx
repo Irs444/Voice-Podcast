@@ -15,17 +15,16 @@ const BrowsePodcast = () => {
     }
     useEffect(() => {
         fetchPodcastData();
-
     }, [])
 
     return (
         <div>
             <div className="container">
-                <div className="row">
+                <div className="row g-3">
                     {
                         podcastList.map((pod) => {
-                            return <div className="col-3 ">
-
+                            return <div className="col-3">
+                                
                                 <div className="card h-100 mt-4">
                                     <img src={"http://localhost:5000/" + pod.image} alt="" className='card-img-top' style={{ height: "10rem" }} />
                                     <div className="card-body">
@@ -46,6 +45,7 @@ const BrowsePodcast = () => {
                     }
                 </div>
             </div>
+            
         </div>
     )
 }

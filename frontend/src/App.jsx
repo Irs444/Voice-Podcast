@@ -3,7 +3,6 @@ import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom"
 import Home from "./components/main/Home";
 import Signup from "./components/main/Signup";
 import Login from "./components/main/Login";
-
 import ArtistLogin from "./components/main/ArtistLogin";
 import { SnackbarProvider } from "notistack";
 import ArtistSignup from "./components/main/ArtistSignup";
@@ -15,6 +14,7 @@ import PublishPage from "./components/artist/PublishPage";
 import BrowsePodcast from "./components/main/BrowsePodcast";
 import Podcastcategory from "./components/main/Podcastcategory";
 import Update from "./components/artist/Update";
+
 
 const App = () => {
   return (
@@ -32,7 +32,8 @@ const App = () => {
             <Route path="artistlogin" element={<ArtistLogin />} />
             <Route path="artistsignup" element={<ArtistSignup />} />
             <Route path="browsepodcast" element={<BrowsePodcast />} />
-            <Route path="category" element={<Podcastcategory />} />
+            <Route path="browsebycategory/:category" element={<Podcastcategory />} />
+            
           </Route>
 
           <Route path="Artist" element={<Artist/>}>
