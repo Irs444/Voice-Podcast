@@ -5,11 +5,11 @@ const VoiceContext = createContext();
 export const VoiceProvider = ({children}) => {
   return (
     <VoiceContext.Provider>
-        {children}
+        {children}   
     </VoiceContext.Provider>
   )
 }
 
 const useVoiceContext = () => useContext(VoiceContext);
 
-export default useVoiceContext;       
+export default useVoiceContext;             

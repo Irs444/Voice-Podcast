@@ -95,10 +95,7 @@ const PublishPage = () => {
   return (
 
     <div className='ms-3 mt-3'>
-
-
-
-      <div className="container d-flex justify-content-center mt-5">
+     <div className="container d-flex justify-content-center mt-5">
         <form className="form" onSubmit={PublishForm.handleSubmit}>
           <h1 className='text-center fw-bold text-danger' style={{ fontFamily: "cursive" }}>Publish Podcast</h1>
           <hr style={{ color: "black", Size: "10px" }} />

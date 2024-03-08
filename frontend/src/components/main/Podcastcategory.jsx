@@ -43,7 +43,7 @@ const Podcastcategory = () => {
             <a href="#!">
               <div
                 className="mask"
-                style={{ backgroundColor: "rgba(251, 251, 251, 0.15)" }}
+                style={{backgroundColor: "rgba(251, 251, 251, 0.15)"}}
               />
             </a>
           </div>
